@@ -99,13 +99,10 @@
 		50DEDEC126C53A260043626F /* SB_ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
-				50DEDEC226C53A260043626F /* AppDelegate.swift */,
-				50DEDEC426C53A260043626F /* SceneDelegate.swift */,
-				50DEDEC626C53A260043626F /* ViewController.swift */,
-				50DEDEC826C53A260043626F /* Main.storyboard */,
-				50DEDECB26C53A270043626F /* Assets.xcassets */,
-				50DEDECD26C53A270043626F /* LaunchScreen.storyboard */,
-				50DEDED026C53A270043626F /* Info.plist */,
+				50DEDEF526C53A670043626F /* Controller */,
+				50DEDEF426C53A5C0043626F /* View */,
+				50DEDEF226C53A4D0043626F /* Model */,
+				50DEDEF626C53A980043626F /* Supporting Files */,
 			);
 			path = SB_ToDoApp;
 			sourceTree = "<group>";
@@ -126,6 +123,41 @@
 				50DEDEE626C53A280043626F /* Info.plist */,
 			);
 			path = SB_ToDoAppUITests;
+			sourceTree = "<group>";
+		};
+		50DEDEF226C53A4D0043626F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		50DEDEF426C53A5C0043626F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		50DEDEF526C53A670043626F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50DEDEC626C53A260043626F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		50DEDEF626C53A980043626F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50DEDEC226C53A260043626F /* AppDelegate.swift */,
+				50DEDEC426C53A260043626F /* SceneDelegate.swift */,
+				50DEDEC826C53A260043626F /* Main.storyboard */,
+				50DEDECB26C53A270043626F /* Assets.xcassets */,
+				50DEDECD26C53A270043626F /* LaunchScreen.storyboard */,
+				50DEDED026C53A270043626F /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3JD57QL5JP;
-				INFOPLIST_FILE = SB_ToDoApp/Info.plist;
+				INFOPLIST_FILE = "SB_ToDoApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3JD57QL5JP;
-				INFOPLIST_FILE = SB_ToDoApp/Info.plist;
+				INFOPLIST_FILE = "SB_ToDoApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
