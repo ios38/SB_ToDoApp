@@ -9,6 +9,8 @@ import UIKit
 
 class TaskListViewController: UIViewController {
     var tableView = UITableView()
+    var dataProvider = DataProvider()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,8 @@ class TaskListViewController: UIViewController {
     private func setupTableView() {
         tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        tableView.dataSource = dataProvider
+        tableView.delegate = dataProvider
         view.addSubview(tableView)
     }
 
