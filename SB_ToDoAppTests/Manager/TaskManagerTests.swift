@@ -85,4 +85,11 @@ class TaskManagerTests: XCTestCase {
         XCTAssertTrue(sut.doneTasksCount == 0)
     }
 
+    func testAddingSameObjectDoesNotIncrementCount() {
+        sut.add(task: Task(title: "Foo"))
+        sut.add(task: Task(title: "Foo"))
+        
+        XCTAssertTrue(sut.tasksCount == 1)
+    }
+
 }
