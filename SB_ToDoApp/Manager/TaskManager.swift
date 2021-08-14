@@ -35,4 +35,9 @@ class TaskManager {
     func doneTask(at index: Int) -> Task {
         return doneTasks[index]
     }
+    
+    func removeAll() {
+        tasks.removeAll()
+        doneTasks.removeAll()
+    }
 }
