@@ -61,7 +61,7 @@ class TaskManagerTests: XCTestCase {
         
         sut.checkTask(at: 0)
         
-        XCTAssertEqual(sut.task(at: 0).title, "Bar")
+        XCTAssertEqual(sut.task(at: 0), secondTask)
     }
     
     func testDoneTaskAtReturnsCheckedTask() {
@@ -71,7 +71,7 @@ class TaskManagerTests: XCTestCase {
         sut.checkTask(at: 0)
         let returnedTask = sut.doneTask(at: 0)
         
-        XCTAssertEqual(returnedTask.title, task.title)
+        XCTAssertEqual(returnedTask, task)
     }
 
 }
