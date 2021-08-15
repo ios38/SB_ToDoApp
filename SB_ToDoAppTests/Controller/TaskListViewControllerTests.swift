@@ -21,12 +21,6 @@ class TaskListViewControllerTests: XCTestCase {
     }
 
     func testTableViewNotNilWhenViewIsLoaded() {
-        let sut = TaskListViewController()
-
-        XCTAssertNotNil(sut.tableView)
-    }
-    
-    func testWhenViewIsLoadedTableViewNotNil() {
         XCTAssertNotNil(sut.tableView)
     }
     
