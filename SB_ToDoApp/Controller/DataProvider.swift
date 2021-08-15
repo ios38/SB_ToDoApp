@@ -21,7 +21,14 @@ extension DataProvider: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return taskManager?.tasksCount ?? 0
+        switch section {
+        case 0:
+            return taskManager?.tasksCount ?? 0
+        case 1:
+            return taskManager?.doneTasksCount ?? 0
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
