@@ -50,4 +50,13 @@ class DataProviderTests: XCTestCase {
         XCTAssertEqual(tableView.numberOfRows(inSection: 1), 2)
     }
 
+    func testCellForRowAtIndexPathReturnsTaskCell() {
+        sut.taskManager?.add(task: Task(title: "Foo"))
+        tableView.reloadData()
+        
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        
+        XCTAssertTrue(cell is TaskCell)
+    }
+
 }
