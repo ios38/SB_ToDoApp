@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum Section: Int {
+    case todo
+    case done
+}
+
 class DataProvider: NSObject {
     var taskManager: TaskManager?    
 }
@@ -21,13 +26,16 @@ extension DataProvider: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        guard let section = Section(rawValue: section) else { fatalError() }
+        guard let taskManager = taskManager else { return 0 }
+
+        
         switch section {
-        case 0:
-            return taskManager?.tasksCount ?? 0
-        case 1:
-            return taskManager?.doneTasksCount ?? 0
-        default:
-            return 0
+        case .todo:
+            return taskManager.tasksCount
+        case .done:
+            return taskManager.doneTasksCount
         }
     }
     
